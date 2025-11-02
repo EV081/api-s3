@@ -3,7 +3,7 @@ import os
 import base64
 from botocore.exceptions import ClientError
 
-def upload_file_handler(event, context):
+def lambda_handler(event, context):
     """
     Espera en event['body']:
       {
