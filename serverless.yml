@@ -28,3 +28,29 @@ functions:
           method: post
           cors: true
           integration: lambda
+  create_bucket:
+    handler: create_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/crear-bucket
+          method: post
+          cors: true
+          integration: lambda
+  create_directory:
+    handler: create_directory.lambda_handler
+    memorySize: 512
+    events:
+      - http:
+          path: /s3/bucket/create-directory
+          method: post
+          cors: true
+          integration: lambda      
+  upload_objeto_bucket:
+    handler: upload_objeto_bucket.lambda_handler
+    memorySize: 512
+    events:
+      - http: 
+          path: /s3/bucket/upload
+          method: post
+          cors: true
+          integration: lambda  
