@@ -46,7 +46,7 @@ functions:
           cors: true
           integration: lambda      
   upload_objeto_bucket:
-    handler: upload_objeto_bucket.lambda_handler
+    handler: upload_file.lambda_handler
     memorySize: 512
     events:
       - http: 
